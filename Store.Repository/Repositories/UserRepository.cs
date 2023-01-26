@@ -1,0 +1,20 @@
+﻿using Store.Domain.Entities;
+
+namespace Store.Repository.Repositories
+{
+    /// <summary>
+    /// Repositorio para acesso de usuarios da entidade <see cref="UserEntity"/>
+    /// </summary>
+    public class UserRepository : BaseRepository<UserEntity>
+    {
+        public UserRepository() : base("User")
+        {
+
+        }
+
+        public UserEntity? GetByEmail(string email, string password)
+        {
+            return GetAll().Find(x => x.Email == email && x.Password == password);
+        }
+    }
+}

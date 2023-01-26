@@ -1,0 +1,7 @@
+Funções Necessárias:
+
+1.CRUD dos produtos
+2.Cadastro
+	2.1 - Nome da loja, nome do dono, telefone, email e senha
+3.Login
+3.1 - Email e Senha
