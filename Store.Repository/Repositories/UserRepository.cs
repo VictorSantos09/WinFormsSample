@@ -14,7 +14,7 @@ namespace Store.Repository.Repositories
 
         public UserEntity? GetByEmail(string email, string password)
         {
-            return GetAll().Find(x => x.Email == email && x.Password == password);
+            return GetAll().Find(x => x.Email == email.ToUpper() && x.Password == password);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Store.Application.Dto;
 using Store.Domain.Entities;
 using Store.Repository.Repositories;
-using System.Net.Http.Headers;
 
 namespace Store.Application.Services
 {
@@ -14,7 +13,7 @@ namespace Store.Application.Services
             _userRepository = userRepository;
         }
 
-        public BaseDto CreateItem(string itemName, decimal itemValue, int amountInStock, string email, string password)
+        public BaseDto Create(string itemName, decimal itemValue, int amountInStock, string email, string password)
         {
             if (string.IsNullOrEmpty(itemName))
                 return new BaseDto("Digite o nome do item", false);
@@ -37,9 +36,21 @@ namespace Store.Application.Services
             return new BaseDto($"Item {product.Name} adicionado", true);
         }
 
-        public void RemoveItem()
+        public BaseDto Remove(string itemName, string email, string password)
         {
+            var user = _userRepository.GetByEmail(email, password);
 
+            if (user == null)
+                return new BaseDto("Usuário não encontrado", false);
+
+            var product = user.productEntities.Find(x => x.Name == itemName.ToUpper());
+
+            if (product == null)
+                return new BaseDto("produto não encontrado", false);
+
+            user.productEntities.Remove(product);
+
+            return new BaseDto($"produto {product.Name} removido", false);
         }
     }
 }
