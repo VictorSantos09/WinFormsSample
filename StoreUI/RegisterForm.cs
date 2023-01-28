@@ -1,14 +1,5 @@
 ﻿using Store.Application.Services;
 using Store.Repository.Repositories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StoreUI
 {
@@ -16,9 +7,11 @@ namespace StoreUI
     {
         private readonly RegisterService _register;
         private readonly UserRepository _userRepository;
+        private readonly Form1 _loginForm;
 
-        public RegisterForm()
+        public RegisterForm(Form1 loginForm)
         {
+            _loginForm = loginForm;
             _userRepository = new UserRepository();
             _register = new RegisterService(_userRepository);
             InitializeComponent();
@@ -29,7 +22,19 @@ namespace StoreUI
         {
             var result = _register.Register(userNameText.Text, storeNameText.Text, emailText.Text, passwordText.Text, phoneNumberText.Text);
 
-            MessageBox.Show(result._Message);
+            if (result._Condition)
+            {
+                MessageBox.Show(result._Message);
+
+                Hide();
+
+                _loginForm.Show();
+            }
+
+            else
+            {
+                MessageBox.Show(result._Message);
+            }
         }
     }
 }

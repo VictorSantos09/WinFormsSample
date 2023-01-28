@@ -160,7 +160,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "RegisterForm";
-            this.Text = "RegisterForm";
+            this.Text = "Cadastro";
             this.ResumeLayout(false);
             this.PerformLayout();
 

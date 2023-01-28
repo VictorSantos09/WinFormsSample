@@ -31,7 +31,7 @@ namespace Store.Application.Services
             if (user == null)
                 return new BaseDto("Usuário não encontado", false);
 
-            user.productEntities.Add(product);
+            user.Products.Add(product);
 
             return new BaseDto($"Item {product.Name} adicionado", true);
         }
@@ -43,12 +43,12 @@ namespace Store.Application.Services
             if (user == null)
                 return new BaseDto("Usuário não encontrado", false);
 
-            var product = user.productEntities.Find(x => x.Name == itemName.ToUpper());
+            var product = user.Products.Find(x => x.Name == itemName.ToUpper());
 
             if (product == null)
                 return new BaseDto("produto não encontrado", false);
 
-            user.productEntities.Remove(product);
+            user.Products.Remove(product);
 
             return new BaseDto($"produto {product.Name} removido", false);
         }

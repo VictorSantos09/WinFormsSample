@@ -8,6 +8,7 @@ namespace StoreUI
 
         private readonly LoginService _login;
         private readonly UserRepository _userRepository;
+        private HomeForm _home;
 
         public Form1()
         {
@@ -23,16 +24,26 @@ namespace StoreUI
 
             if (result._Condition)
             {
-                var user = _userRepository.GetByEmail(emailText.Text.ToUpper(),passwordText.Text);
+                var user = _userRepository.GetByEmail(emailText.Text.ToUpper(), passwordText.Text);
 
-                var home = new HomeForm(user);
-                home.Show();
+                _home = new HomeForm(user);
+
+                Hide();
+
+                _home.Show();
+            }
+
+            else
+            {
+                MessageBox.Show(result._Message);
             }
         }
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            var registerForm = new RegisterForm();
+            var registerForm = new RegisterForm(this);
+
+            Hide();
 
             registerForm.Show();
         }

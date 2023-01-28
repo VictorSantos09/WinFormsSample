@@ -13,8 +13,8 @@ namespace StoreUI
             Setup.SetServices(builder);
             Setup.SetRepositories(builder);
 
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            (new Form1()).Show();
+            Application.Run();
         }
     }
 }

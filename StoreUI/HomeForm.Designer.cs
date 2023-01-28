@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.helloLabel = new System.Windows.Forms.Label();
-            this.userNameLabel = new System.Windows.Forms.Label();
             this.servicesLabel = new System.Windows.Forms.Label();
             this.addProductButton = new System.Windows.Forms.Button();
             this.removeProductButton = new System.Windows.Forms.Button();
@@ -47,15 +46,6 @@
             this.helloLabel.Size = new System.Drawing.Size(55, 30);
             this.helloLabel.TabIndex = 0;
             this.helloLabel.Text = "OLÁ";
-            // 
-            // userNameLabel
-            // 
-            this.userNameLabel.AutoSize = true;
-            this.userNameLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.userNameLabel.Location = new System.Drawing.Point(105, 34);
-            this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(0, 30);
-            this.userNameLabel.TabIndex = 1;
             // 
             // servicesLabel
             // 
@@ -93,6 +83,7 @@
             this.viewProductsButton.TabIndex = 5;
             this.viewProductsButton.Text = "Ver Produtos";
             this.viewProductsButton.UseVisualStyleBackColor = true;
+            this.viewProductsButton.Click += new System.EventHandler(this.viewProductsButton_Click);
             // 
             // PhoneNumberLabel
             // 
@@ -125,12 +116,11 @@
             this.Controls.Add(this.removeProductButton);
             this.Controls.Add(this.addProductButton);
             this.Controls.Add(this.servicesLabel);
-            this.Controls.Add(this.userNameLabel);
             this.Controls.Add(this.helloLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "HomeForm";
-            this.Text = "HomeForm";
+            this.Text = "Inicio";
             this.Load += new System.EventHandler(this.HomeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,7 +130,6 @@
         #endregion
 
         private Label helloLabel;
-        private Label userNameLabel;
         private Label servicesLabel;
         private Button addProductButton;
         private Button removeProductButton;

@@ -114,7 +114,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
-            this.Text = "v";
+            this.Text = "Store Management By Victor Santos";
             this.ResumeLayout(false);
             this.PerformLayout();
 

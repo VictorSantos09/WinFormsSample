@@ -2,7 +2,7 @@
 
 namespace StoreUI
 {
-    public partial class HomeForm : Form
+    public  partial class HomeForm : Form
     {
         private readonly UserEntity _user;
         public HomeForm(UserEntity user)
@@ -13,9 +13,14 @@ namespace StoreUI
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-            userNameLabel.Text = _user.Name;
-            PhoneNumberLabel.Text = _user.PhoneNumber;
-            emailLabel.Text = _user.Email;
+            helloLabel.Text = $"OLÁ, {_user.Name}";
+            PhoneNumberLabel.Text = $"Telefone: {_user.PhoneNumber}";
+            emailLabel.Text = $"Email: {_user.Email}";
+        }
+
+        private void viewProductsButton_Click(object sender, EventArgs e)
+        {
+            new ViewProductsForm(_user).Show();
         }
     }
 }
