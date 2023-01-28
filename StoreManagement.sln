@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreUI", "StoreUI\StoreUI.csproj", "{88370FAD-A72F-4FD7-A9A1-B1F45A9A4FA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Application", "Store.Application\Store.Application.csproj", "{388D46F7-ECDA-4BA8-9FF0-31E0EF5B15BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Application", "Store.Application\Store.Application.csproj", "{388D46F7-ECDA-4BA8-9FF0-31E0EF5B15BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Domain", "Store.Domain\Store.Domain.csproj", "{383B00CD-8936-41C4-8754-18483358F952}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Domain", "Store.Domain\Store.Domain.csproj", "{383B00CD-8936-41C4-8754-18483358F952}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Repository", "Store.Repository\Store.Repository.csproj", "{5E6E3F94-9425-4DF5-B100-F061CBAA05E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Repository", "Store.Repository\Store.Repository.csproj", "{5E6E3F94-9425-4DF5-B100-F061CBAA05E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{090B9B7C-D519-43D3-9D38-C743388FB899}"
 	ProjectSection(SolutionItems) = preProject
 		BussinesRule.txt = BussinesRule.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreUI", "StoreUI\StoreUI.csproj", "{5DF5EEE4-2B05-4961-AA3B-4C6183E2FB0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +22,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{88370FAD-A72F-4FD7-A9A1-B1F45A9A4FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88370FAD-A72F-4FD7-A9A1-B1F45A9A4FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88370FAD-A72F-4FD7-A9A1-B1F45A9A4FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88370FAD-A72F-4FD7-A9A1-B1F45A9A4FA0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{388D46F7-ECDA-4BA8-9FF0-31E0EF5B15BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{388D46F7-ECDA-4BA8-9FF0-31E0EF5B15BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{388D46F7-ECDA-4BA8-9FF0-31E0EF5B15BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,6 +34,10 @@ Global
 		{5E6E3F94-9425-4DF5-B100-F061CBAA05E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E6E3F94-9425-4DF5-B100-F061CBAA05E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E6E3F94-9425-4DF5-B100-F061CBAA05E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DF5EEE4-2B05-4961-AA3B-4C6183E2FB0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DF5EEE4-2B05-4961-AA3B-4C6183E2FB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DF5EEE4-2B05-4961-AA3B-4C6183E2FB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DF5EEE4-2B05-4961-AA3B-4C6183E2FB0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
