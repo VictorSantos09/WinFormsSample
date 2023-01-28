@@ -21,7 +21,13 @@ namespace StoreUI
         {
             var result = _login.Login(emailText.Text.ToUpper(), passwordText.Text);
 
-            MessageBox.Show(result._Message);
+            if (result._Condition)
+            {
+                var user = _userRepository.GetByEmail(emailText.Text.ToUpper(),passwordText.Text);
+
+                var home = new HomeForm(user);
+                home.Show();
+            }
         }
 
         private void registerButton_Click(object sender, EventArgs e)
