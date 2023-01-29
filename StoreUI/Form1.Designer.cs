@@ -34,6 +34,7 @@
             this.passwordLabel = new System.Windows.Forms.Label();
             this.passwordText = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.registerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -80,18 +81,30 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(314, 354);
+            this.loginButton.Location = new System.Drawing.Point(314, 395);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(141, 43);
             this.loginButton.TabIndex = 5;
             this.loginButton.Text = "LOGIN";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // registerButton
+            // 
+            this.registerButton.Location = new System.Drawing.Point(314, 319);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(141, 43);
+            this.registerButton.TabIndex = 6;
+            this.registerButton.Text = "REGISTER";
+            this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.passwordText);
@@ -101,7 +114,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
-            this.Text = "StoreManagment";
+            this.Text = "Store Management By Victor Santos";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +128,6 @@
         private Label passwordLabel;
         private TextBox passwordText;
         private Button loginButton;
+        private Button registerButton;
     }
 }

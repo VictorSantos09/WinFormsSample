@@ -8,10 +8,11 @@
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
 
-        public List<ProductEntity> productEntities { get; set; }
+        public List<ProductEntity> Products { get; set; } = new();
 
         public UserEntity(string storeName, string name, string email, string password, string phoneNumber)
         {
+            Id = Guid.NewGuid();
             StoreName = storeName.ToUpper();
             Name = name.ToUpper();
             Email = email.ToUpper();

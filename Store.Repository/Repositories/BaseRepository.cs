@@ -15,7 +15,7 @@ namespace Store.Repository.Repositories
 
         public BaseRepository(string pathFile)
         {
-            _pathFile = $@"{Directory.GetCurrentDirectory()}..\..\..\..\..\Pizzaria.Repository\DataBase\{pathFile}.json";
+            _pathFile = $@"{Directory.GetCurrentDirectory()}..\..\..\..\..\Store.Repository\DataBase\{pathFile}.json";
         }
 
         public BaseRepository()
