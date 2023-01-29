@@ -13,9 +13,9 @@ namespace StoreUI
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-            helloLabel.Text = $"OLÁ, {_user.Name}";
-            PhoneNumberLabel.Text = $"Telefone: {_user.PhoneNumber}";
-            emailLabel.Text = $"Email: {_user.Email}";
+            helloLabel.Text = $"OLÁ, {_user.Name}".ToUpper();
+            PhoneNumberLabel.Text = $"Telefone: {_user.PhoneNumber}".ToUpper();
+            emailLabel.Text = $"Email: {_user.Email}".ToUpper();
         }
 
         private void viewProductsButton_Click(object sender, EventArgs e)
@@ -26,6 +26,11 @@ namespace StoreUI
         private void addProductButton_Click(object sender, EventArgs e)
         {
             new AddProductForm(_user).Show();
+        }
+
+        private void removeProductButton_Click(object sender, EventArgs e)
+        {
+            new RemoveProductForm(_user).Show();
         }
     }
 }

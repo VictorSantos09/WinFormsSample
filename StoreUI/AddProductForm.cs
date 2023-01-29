@@ -10,13 +10,13 @@ namespace StoreUI
         public AddProductForm(UserEntity user)
         {
             _user = user;
-            _productService = new(new());
+            _productService = new(new(),_user);
             InitializeComponent();
         }
 
         private void saveItemButton_Click(object sender, EventArgs e)
         {
-            var result = _productService.Create(itemNameText.Text.ToUpper(), itemPriceValue.Value, Convert.ToInt32(itemAmountValue.Value), _user.Id);
+            var result = _productService.Create(itemNameText.Text.ToUpper(), itemPriceValue.Value, Convert.ToInt32(itemAmountValue.Value));
 
             MessageBox.Show(result._Message.ToLower());
         }

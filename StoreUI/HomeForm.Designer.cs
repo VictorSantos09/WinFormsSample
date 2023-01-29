@@ -75,6 +75,7 @@
             this.removeProductButton.TabIndex = 4;
             this.removeProductButton.Text = "Remover Produto";
             this.removeProductButton.UseVisualStyleBackColor = true;
+            this.removeProductButton.Click += new System.EventHandler(this.removeProductButton_Click);
             // 
             // viewProductsButton
             // 

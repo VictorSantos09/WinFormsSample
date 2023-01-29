@@ -7,13 +7,15 @@ namespace Store.Application.Services
     public class ProductService
     {
         private readonly UserRepository _userRepository;
+        private readonly UserEntity _user;
 
-        public ProductService(UserRepository userRepository)
+        public ProductService(UserRepository userRepository, UserEntity user)
         {
             _userRepository = userRepository;
+            _user = user;
         }
 
-        public BaseDto Create(string itemName, decimal itemValue, int amountInStock, Guid userId)
+        public BaseDto Create(string itemName, decimal itemValue, int amountInStock)
         {
             if (string.IsNullOrEmpty(itemName))
                 return new BaseDto("Digite o nome do item", false);
@@ -26,35 +28,46 @@ namespace Store.Application.Services
 
             var product = new ProductEntity(itemName, itemValue, amountInStock);
 
-            var user = _userRepository.GetById(userId);
-
-            if (user == null)
+            if (_user == null)
                 return new BaseDto("Usuário não encontado", false);
 
-            user.Products.Add(product);
+            _user.Products.Add(product);
 
-            _userRepository.Update(userId, user);
+            _userRepository.Update(_user.Id, _user);
 
             return new BaseDto($"Item {product.Name} adicionado", true);
         }
 
-        public BaseDto Remove(string itemName, Guid userID)
+        public BaseDto Remove(List<string> itens)
         {
-            var user = _userRepository.GetById(userID);
-
-            if (user == null)
+            if (_user == null)
                 return new BaseDto("Usuário não encontrado", false);
 
-            var product = user.Products.Find(x => x.Name == itemName.ToUpper());
+            var products = new List<ProductEntity>();
 
-            if (product == null)
-                return new BaseDto("produto não encontrado", false);
+            foreach (var item in itens)
+            {
+                var userItem = _user.Products.Find(x => x.Name == item);
 
-            user.Products.Remove(product);
+                if (userItem != null)
+                    products.Add(userItem);
+            }
 
-            _userRepository.Update(userID, user);
+            if (products.Count == 0 || products == null)
+                return new BaseDto("produtos não encontrados", false);
 
-            return new BaseDto($"produto {product.Name} removido", false);
+            var counter = 0;
+
+            foreach (var item in products)
+            {
+                _user.Products.Remove(item);
+                counter++;
+            }
+
+            _userRepository.Update(_user.Id, _user);
+
+
+            return new BaseDto($"{counter} foram removidos", false);
         }
     }
 }
