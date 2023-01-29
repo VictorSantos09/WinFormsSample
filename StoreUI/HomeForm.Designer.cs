@@ -65,6 +65,7 @@
             this.addProductButton.TabIndex = 3;
             this.addProductButton.Text = "Adicionar Produto";
             this.addProductButton.UseVisualStyleBackColor = true;
+            this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click);
             // 
             // removeProductButton
             // 

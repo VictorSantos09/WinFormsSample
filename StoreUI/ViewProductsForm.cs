@@ -14,15 +14,15 @@ namespace StoreUI
 
         private void ViewProductsForm_Load(object sender, EventArgs e)
         {
-            if (_user.Products.Count == 0)
+            listProductsBox.Items.Clear();
+
+            foreach (var item in _user.Products)
             {
-                listProductsBox.Text = "Nenhum item registrado";
+                var pattern = $"ITEM: {item.Name} | VALOR: {item.Value} | QUANTIDADE: {item.AmountInStock}".ToUpper();
+                listProductsBox.Items.Add(pattern);
             }
 
-            else
-            {
-                listProductsBox.Items.AddRange(_user.Products.ToArray());
-            }
+            this.Controls.Add(listProductsBox);
         }
     }
 }

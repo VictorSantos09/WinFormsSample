@@ -13,7 +13,7 @@ namespace Store.Application.Services
             _userRepository = userRepository;
         }
 
-        public BaseDto Create(string itemName, decimal itemValue, int amountInStock, string email, string password)
+        public BaseDto Create(string itemName, decimal itemValue, int amountInStock, Guid userId)
         {
             if (string.IsNullOrEmpty(itemName))
                 return new BaseDto("Digite o nome do item", false);
@@ -26,19 +26,21 @@ namespace Store.Application.Services
 
             var product = new ProductEntity(itemName, itemValue, amountInStock);
 
-            var user = _userRepository.GetByEmail(email, password);
+            var user = _userRepository.GetById(userId);
 
             if (user == null)
                 return new BaseDto("Usuário não encontado", false);
 
             user.Products.Add(product);
 
+            _userRepository.Update(userId, user);
+
             return new BaseDto($"Item {product.Name} adicionado", true);
         }
 
-        public BaseDto Remove(string itemName, string email, string password)
+        public BaseDto Remove(string itemName, Guid userID)
         {
-            var user = _userRepository.GetByEmail(email, password);
+            var user = _userRepository.GetById(userID);
 
             if (user == null)
                 return new BaseDto("Usuário não encontrado", false);
@@ -49,6 +51,8 @@ namespace Store.Application.Services
                 return new BaseDto("produto não encontrado", false);
 
             user.Products.Remove(product);
+
+            _userRepository.Update(userID, user);
 
             return new BaseDto($"produto {product.Name} removido", false);
         }

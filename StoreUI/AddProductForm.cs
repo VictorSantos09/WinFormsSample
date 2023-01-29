@@ -1,20 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Store.Application.Services;
+using Store.Domain.Entities;
 
 namespace StoreUI
 {
     public partial class AddProductForm : Form
     {
-        public AddProductForm()
+        private readonly ProductService _productService;
+        private readonly UserEntity _user;
+        public AddProductForm(UserEntity user)
         {
+            _user = user;
+            _productService = new(new());
             InitializeComponent();
+        }
+
+        private void saveItemButton_Click(object sender, EventArgs e)
+        {
+            var result = _productService.Create(itemNameText.Text.ToUpper(), itemPriceValue.Value, Convert.ToInt32(itemAmountValue.Value), _user.Id);
+
+            MessageBox.Show(result._Message.ToLower());
         }
     }
 }

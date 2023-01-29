@@ -37,7 +37,7 @@
             this.listProductsBox.ItemHeight = 30;
             this.listProductsBox.Location = new System.Drawing.Point(12, 69);
             this.listProductsBox.Name = "listProductsBox";
-            this.listProductsBox.Size = new System.Drawing.Size(328, 274);
+            this.listProductsBox.Size = new System.Drawing.Size(506, 274);
             this.listProductsBox.TabIndex = 0;
             // 
             // ViewProductsForm

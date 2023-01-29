@@ -4,7 +4,7 @@ namespace StoreUI
 {
     public  partial class HomeForm : Form
     {
-        private readonly UserEntity _user;
+        private UserEntity _user;
         public HomeForm(UserEntity user)
         {
             _user = user;
@@ -21,6 +21,11 @@ namespace StoreUI
         private void viewProductsButton_Click(object sender, EventArgs e)
         {
             new ViewProductsForm(_user).Show();
+        }
+
+        private void addProductButton_Click(object sender, EventArgs e)
+        {
+            new AddProductForm(_user).Show();
         }
     }
 }
