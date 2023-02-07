@@ -36,7 +36,7 @@ namespace StoreUI
 
         private void HomeForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MessageBox.Show("Até a próxima :)");
+            MessageBox.Show("Até a próxima :)".ToUpper());
             Application.Exit();
         }
     }

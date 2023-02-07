@@ -24,7 +24,7 @@ namespace StoreUI
 
             if (result._Condition)
             {
-                MessageBox.Show(result._Message);
+                MessageBox.Show(result._Message.ToUpper());
 
                 Hide();
 

@@ -56,18 +56,12 @@ namespace Store.Application.Services
             if (products.Count == 0 || products == null)
                 return new BaseDto("produtos não encontrados", false);
 
-            var counter = 0;
-
-            foreach (var item in products)
-            {
-                _user.Products.Remove(item);
-                counter++;
-            }
+            _user.Products.RemoveRange(0, products.Count);
 
             _userRepository.Update(_user.Id, _user);
 
 
-            return new BaseDto($"{counter} foram removidos", false);
+            return new BaseDto($"{products.Count} foram removidos", false);
         }
     }
 }

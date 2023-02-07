@@ -43,5 +43,16 @@ namespace StoreUI
 
             this.Controls.Add(itensCheckBox);
         }
+
+        private void AllItensCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AllItensCheckBox.Checked)
+            {
+                for (int i = 0; i < itensCheckBox.Items.Count; i++)
+                {
+                    itensCheckBox.SetItemChecked(i, true);
+                }
+            }
+        }
     }
 }

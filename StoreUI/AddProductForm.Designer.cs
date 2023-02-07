@@ -68,7 +68,7 @@
             0});
             this.itemAmountValue.Name = "itemAmountValue";
             this.itemAmountValue.Size = new System.Drawing.Size(205, 35);
-            this.itemAmountValue.TabIndex = 2;
+            this.itemAmountValue.TabIndex = 3;
             // 
             // itemQuantityLabel
             // 
@@ -84,7 +84,7 @@
             this.itemNameText.Location = new System.Drawing.Point(319, 112);
             this.itemNameText.Name = "itemNameText";
             this.itemNameText.Size = new System.Drawing.Size(205, 35);
-            this.itemNameText.TabIndex = 4;
+            this.itemNameText.TabIndex = 1;
             // 
             // itemPriceValue
             // 
@@ -97,14 +97,14 @@
             0});
             this.itemPriceValue.Name = "itemPriceValue";
             this.itemPriceValue.Size = new System.Drawing.Size(206, 35);
-            this.itemPriceValue.TabIndex = 5;
+            this.itemPriceValue.TabIndex = 2;
             // 
             // saveItemButton
             // 
             this.saveItemButton.Location = new System.Drawing.Point(319, 327);
             this.saveItemButton.Name = "saveItemButton";
             this.saveItemButton.Size = new System.Drawing.Size(122, 42);
-            this.saveItemButton.TabIndex = 6;
+            this.saveItemButton.TabIndex = 4;
             this.saveItemButton.Text = "Salvar";
             this.saveItemButton.UseVisualStyleBackColor = true;
             this.saveItemButton.Click += new System.EventHandler(this.saveItemButton_Click);
