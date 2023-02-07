@@ -68,21 +68,21 @@
             this.userNameText.Location = new System.Drawing.Point(331, 12);
             this.userNameText.Name = "userNameText";
             this.userNameText.Size = new System.Drawing.Size(282, 39);
-            this.userNameText.TabIndex = 2;
+            this.userNameText.TabIndex = 1;
             // 
             // storeNameText
             // 
             this.storeNameText.Location = new System.Drawing.Point(331, 97);
             this.storeNameText.Name = "storeNameText";
             this.storeNameText.Size = new System.Drawing.Size(282, 39);
-            this.storeNameText.TabIndex = 3;
+            this.storeNameText.TabIndex = 2;
             // 
             // emailText
             // 
             this.emailText.Location = new System.Drawing.Point(331, 179);
             this.emailText.Name = "emailText";
             this.emailText.Size = new System.Drawing.Size(282, 39);
-            this.emailText.TabIndex = 5;
+            this.emailText.TabIndex = 3;
             // 
             // emailLabel
             // 
@@ -100,7 +100,7 @@
             this.passwordText.Location = new System.Drawing.Point(331, 262);
             this.passwordText.Name = "passwordText";
             this.passwordText.Size = new System.Drawing.Size(282, 39);
-            this.passwordText.TabIndex = 7;
+            this.passwordText.TabIndex = 4;
             // 
             // passwordLabel
             // 
@@ -118,7 +118,7 @@
             this.phoneNumberText.Location = new System.Drawing.Point(331, 349);
             this.phoneNumberText.Name = "phoneNumberText";
             this.phoneNumberText.Size = new System.Drawing.Size(282, 39);
-            this.phoneNumberText.TabIndex = 9;
+            this.phoneNumberText.TabIndex = 5;
             // 
             // phoneNumberLabel
             // 
@@ -136,7 +136,7 @@
             this.registerButton.Location = new System.Drawing.Point(311, 406);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(174, 43);
-            this.registerButton.TabIndex = 10;
+            this.registerButton.TabIndex = 6;
             this.registerButton.Text = "CADASTRAR";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
@@ -161,6 +161,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "RegisterForm";
             this.Text = "Cadastro";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -62,7 +62,7 @@
             this.addProductButton.Location = new System.Drawing.Point(38, 311);
             this.addProductButton.Name = "addProductButton";
             this.addProductButton.Size = new System.Drawing.Size(208, 46);
-            this.addProductButton.TabIndex = 3;
+            this.addProductButton.TabIndex = 1;
             this.addProductButton.Text = "Adicionar Produto";
             this.addProductButton.UseVisualStyleBackColor = true;
             this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click);
@@ -72,7 +72,7 @@
             this.removeProductButton.Location = new System.Drawing.Point(292, 311);
             this.removeProductButton.Name = "removeProductButton";
             this.removeProductButton.Size = new System.Drawing.Size(208, 46);
-            this.removeProductButton.TabIndex = 4;
+            this.removeProductButton.TabIndex = 2;
             this.removeProductButton.Text = "Remover Produto";
             this.removeProductButton.UseVisualStyleBackColor = true;
             this.removeProductButton.Click += new System.EventHandler(this.removeProductButton_Click);
@@ -82,7 +82,7 @@
             this.viewProductsButton.Location = new System.Drawing.Point(538, 311);
             this.viewProductsButton.Name = "viewProductsButton";
             this.viewProductsButton.Size = new System.Drawing.Size(208, 46);
-            this.viewProductsButton.TabIndex = 5;
+            this.viewProductsButton.TabIndex = 3;
             this.viewProductsButton.Text = "Ver Produtos";
             this.viewProductsButton.UseVisualStyleBackColor = true;
             this.viewProductsButton.Click += new System.EventHandler(this.viewProductsButton_Click);

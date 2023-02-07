@@ -77,14 +77,14 @@
             this.passwordText.Location = new System.Drawing.Point(314, 216);
             this.passwordText.Name = "passwordText";
             this.passwordText.Size = new System.Drawing.Size(228, 39);
-            this.passwordText.TabIndex = 3;
+            this.passwordText.TabIndex = 2;
             // 
             // loginButton
             // 
             this.loginButton.Location = new System.Drawing.Point(314, 395);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(141, 43);
-            this.loginButton.TabIndex = 5;
+            this.loginButton.TabIndex = 4;
             this.loginButton.Text = "LOGIN";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
@@ -94,7 +94,7 @@
             this.registerButton.Location = new System.Drawing.Point(314, 319);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(141, 43);
-            this.registerButton.TabIndex = 6;
+            this.registerButton.TabIndex = 3;
             this.registerButton.Text = "REGISTER";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
@@ -115,6 +115,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Store Management By Victor Santos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -24,7 +24,7 @@ namespace StoreUI
 
             if (result._Condition)
             {
-                MessageBox.Show(result._Message);
+                MessageBox.Show(result._Message.ToUpper());
 
                 Hide();
 
@@ -35,6 +35,11 @@ namespace StoreUI
             {
                 MessageBox.Show(result._Message.ToUpper());
             }
+        }
+
+        private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _loginForm.Show();
         }
     }
 }
