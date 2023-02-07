@@ -18,7 +18,7 @@ namespace StoreUI
 
             foreach (var item in _user.Products)
             {
-                var pattern = $"ITEM: {item.Name} | VALOR: {item.Value} | QUANTIDADE: {item.AmountInStock}".ToUpper();
+                var pattern = $"ITEM: {item.Name} | VALOR: R${item.Value} | UNIDADES: {item.AmountInStock}".ToUpper();
                 listProductsBox.Items.Add(pattern);
             }
 
