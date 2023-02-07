@@ -13,6 +13,7 @@ namespace StoreUI
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
+
             helloLabel.Text = $"OLÁ, {_user.Name}".ToUpper();
             PhoneNumberLabel.Text = $"Telefone: {_user.PhoneNumber}".ToUpper();
             emailLabel.Text = $"Email: {_user.Email}".ToUpper();
@@ -31,6 +32,12 @@ namespace StoreUI
         private void removeProductButton_Click(object sender, EventArgs e)
         {
             new RemoveProductForm(_user).Show();
+        }
+
+        private void HomeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MessageBox.Show("Até a próxima :)");
+            Application.Exit();
         }
     }
 }

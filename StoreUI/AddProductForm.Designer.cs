@@ -42,11 +42,11 @@
             // itemNameLabel
             // 
             this.itemNameLabel.AutoSize = true;
-            this.itemNameLabel.Location = new System.Drawing.Point(157, 115);
+            this.itemNameLabel.Location = new System.Drawing.Point(133, 115);
             this.itemNameLabel.Name = "itemNameLabel";
-            this.itemNameLabel.Size = new System.Drawing.Size(148, 30);
+            this.itemNameLabel.Size = new System.Drawing.Size(180, 30);
             this.itemNameLabel.TabIndex = 0;
-            this.itemNameLabel.Text = "Nome do Item";
+            this.itemNameLabel.Text = "Nome do Produto";
             // 
             // itemPriceLabel
             // 
@@ -73,11 +73,11 @@
             // itemQuantityLabel
             // 
             this.itemQuantityLabel.AutoSize = true;
-            this.itemQuantityLabel.Location = new System.Drawing.Point(183, 245);
+            this.itemQuantityLabel.Location = new System.Drawing.Point(206, 245);
             this.itemQuantityLabel.Name = "itemQuantityLabel";
-            this.itemQuantityLabel.Size = new System.Drawing.Size(122, 30);
+            this.itemQuantityLabel.Size = new System.Drawing.Size(99, 30);
             this.itemQuantityLabel.TabIndex = 3;
-            this.itemQuantityLabel.Text = "Quantidade";
+            this.itemQuantityLabel.Text = "Unidades";
             // 
             // itemNameText
             // 

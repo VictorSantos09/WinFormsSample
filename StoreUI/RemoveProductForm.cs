@@ -18,7 +18,7 @@ namespace StoreUI
         private void removeItemButton_Click(object sender, EventArgs e)
         {
             if (itensCheckBox.CheckedItems.Count == 0)
-                MessageBox.Show("Nenhum item registrado");
+                MessageBox.Show("NENHUM ITEM ESCOLHIDO");
 
             else
             {
@@ -26,7 +26,11 @@ namespace StoreUI
 
                 var result = _productService.Remove(myOtherList);
 
-                MessageBox.Show(result._Message);
+                MessageBox.Show(result._Message.ToUpper());
+
+                itensCheckBox.Items.Clear();
+
+                RemoveProductForm_Load(sender, e);
             }
         }
 

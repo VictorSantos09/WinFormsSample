@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.removeItemButton = new System.Windows.Forms.Button();
-            this.itemNameText = new System.Windows.Forms.TextBox();
             this.itensCheckBox = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
@@ -42,13 +41,6 @@
             this.removeItemButton.Text = "Apagar";
             this.removeItemButton.UseVisualStyleBackColor = true;
             this.removeItemButton.Click += new System.EventHandler(this.removeItemButton_Click);
-            // 
-            // itemNameText
-            // 
-            this.itemNameText.Location = new System.Drawing.Point(448, 131);
-            this.itemNameText.Name = "itemNameText";
-            this.itemNameText.Size = new System.Drawing.Size(199, 35);
-            this.itemNameText.TabIndex = 1;
             // 
             // itensCheckBox
             // 
@@ -64,7 +56,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.itensCheckBox);
-            this.Controls.Add(this.itemNameText);
             this.Controls.Add(this.removeItemButton);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -72,14 +63,12 @@
             this.Text = "RemoveProductForm";
             this.Load += new System.EventHandler(this.RemoveProductForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private Button removeItemButton;
-        private TextBox itemNameText;
         private CheckedListBox itensCheckBox;
     }
 }

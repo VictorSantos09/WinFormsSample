@@ -33,7 +33,7 @@ namespace StoreUI
 
             else
             {
-                MessageBox.Show(result._Message);
+                MessageBox.Show(result._Message.ToUpper());
             }
         }
     }

@@ -18,7 +18,7 @@ namespace StoreUI
         {
             var result = _productService.Create(itemNameText.Text.ToUpper(), itemPriceValue.Value, Convert.ToInt32(itemAmountValue.Value));
 
-            MessageBox.Show(result._Message.ToLower());
+            MessageBox.Show(result._Message.ToUpper());
         }
     }
 }
