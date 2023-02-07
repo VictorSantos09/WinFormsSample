@@ -161,6 +161,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "RegisterForm";
             this.Text = "Cadastro";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

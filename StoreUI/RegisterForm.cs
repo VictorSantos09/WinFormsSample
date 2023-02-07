@@ -36,5 +36,10 @@ namespace StoreUI
                 MessageBox.Show(result._Message.ToUpper());
             }
         }
+
+        private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _loginForm.Show();
+        }
     }
 }
